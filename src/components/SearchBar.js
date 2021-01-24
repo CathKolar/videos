@@ -1,6 +1,11 @@
 import React from "react";
 
 class SearchBar extends React.Component {
+  state = { term: "" };
+  onInputChange = (event) => {
+    this.setState({ term: event.target.value });
+  };
+
   render() {
     return (
       <div className="search-bar ui segment">
@@ -10,6 +15,8 @@ class SearchBar extends React.Component {
             <input
               autoFocus
               type="text"
+              value={this.state.term}
+              onChange={this.onInputChange}
               placeholder="Whatcha wanna watch!?"
             ></input>
           </div>
