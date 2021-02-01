@@ -2,7 +2,12 @@
   display: flex !important;
   align-items: center !important;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
+.video-item:hover {
+  transform: scale(1.01) rotate(1deg);
+}
+
 .video-item.item img {
   max-width: 180px;
 }
