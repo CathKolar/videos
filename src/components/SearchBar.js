@@ -3,9 +3,6 @@ import React, { useState } from "react";
 const SearchBar = ({ onFormSubmit }) => {
   const [term, setTerm] = useState("");
 
-  const onInputChange = (event) => {
-    setTerm(event.target.value);
-  };
   const onSubmit = (event) => {
     event.preventDefault();
 
@@ -21,7 +18,7 @@ const SearchBar = ({ onFormSubmit }) => {
             autoFocus
             type="text"
             value={term}
-            onChange={onInputChange}
+            onChange={(event) => setTerm(event.target.value)}
             placeholder="Whatcha wanna watch!?"
           ></input>
         </div>
